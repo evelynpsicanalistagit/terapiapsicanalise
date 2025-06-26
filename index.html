@@ -1,1 +1,169 @@
-<h1>Olá, mundo!</h1>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evelyn Amorim - Terapeuta</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Libre Baskerville', serif;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .glass {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(4px);
+    }
+
+    .highlight-title {
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+      letter-spacing: 1px;
+    }
+
+    .pulse:hover {
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255,255,255, 0.5); }
+      70% { box-shadow: 0 0 0 10px rgba(255,255,255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255,255,255, 0); }
+    }
+
+    .bg-side {
+      background-image: url('8.png');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="text-[#EDEB37]">
+
+  <!-- Layout principal adaptado -->
+  <div class="min-h-screen grid grid-cols-1 md:grid-cols-[10%_1fr_10%]">
+    <!-- Lado esquerdo -->
+    <div class="bg-side hidden md:block"></div>
+
+    <!-- Conteúdo central -->
+    <div class="bg-gradient-to-b from-[#4b0f1e] via-[#981b37] to-[#7b1e5e] px-6 lg:px-12 py-10 overflow-y-auto">
+      <!-- Navbar -->
+      <nav class="flex justify-between items-center py-6 fade-up text-lg font-medium">
+        <div class="text-3xl font-extrabold tracking-widest">EVELYN AMORIM</div>
+        <ul class="hidden sm:flex space-x-6 text-sm sm:text-base">
+          <li><a href="#" class="hover:underline">Início</a></li>
+          <li><a href="#sobre" class="hover:underline">Sobre</a></li>
+          <li><a href="#ajuda" class="hover:underline">Serviços</a></li>
+          <li><a href="#contato" class="hover:underline">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hero -->
+      <section class="flex flex-col lg:flex-row items-center lg:items-start justify-center py-16 fade-up gap-10">
+        <!-- Texto -->
+        <div class="w-full lg:w-1/2 text-center lg:text-left">
+          <h1 class="text-5xl sm:text-6xl font-bold leading-tight highlight-title">
+            Terapeuta & <br /> Psicanalista
+          </h1>
+          <p class="mt-4 text-2xl">Agende sua sessão!</p>
+          <p class="mt-4 text-lg opacity-90 max-w-xl mx-auto lg:mx-0">
+            Te ajudo a ser a mulher que sempre sonhou.<br />
+            Curando feridas e transformando dores em força.
+          </p>
+          <a href="#contato" class="mt-6 bg-white text-[#981b37] font-bold px-6 py-3 rounded-full hover:bg-[#EDEB37] hover:text-[#981b37] transition pulse text-lg inline-block">
+            Agendar Sessão
+          </a>
+        </div>
+
+        <!-- Imagem com base -->
+        <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
+          <div class="relative w-full max-w-md">
+            <img src="4.png" alt="Evelyn Amorim" class="rounded-lg shadow-lg w-full h-auto" />
+            <div class="h-3 bg-[#EDEB37] mt-2 rounded-b-lg shadow-md"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre mim -->
+      <section id="sobre" class="py-12 max-w-3xl mx-auto fade-up text-lg leading-relaxed">
+        <h2 class="text-4xl font-bold mb-6 text-center">Sobre mim</h2>
+        <div class="glass p-8 rounded-lg shadow-md space-y-6">
+          <p>Sou Evelyn Amorim, terapeuta e psicanalista focada em resultados...</p>
+          <p>Com uma abordagem acolhedora e eficaz, utilizo técnicas terapêuticas...</p>
+          <p>Se você deseja resgatar sua essência e viver com mais equilíbrio...</p>
+          <p class="font-semibold text-xl">Vamos construir essa mudança?</p>
+          <a href="#contato" class="inline-block bg-white text-[#981b37] font-bold px-6 py-3 rounded-full hover:bg-[#EDEB37] hover:text-[#981b37] transition pulse text-lg">
+            Clique aqui para agendar
+          </a>
+        </div>
+      </section>
+
+      <!-- Ajuda -->
+      <section id="ajuda" class="py-14 max-w-5xl mx-auto fade-up text-lg">
+        <h2 class="text-4xl font-bold mb-10 text-center">Como posso te ajudar?</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Cards -->
+          <div class="glass p-6 rounded-lg">
+            <h3 class="text-2xl font-bold mb-2">Terapia do Esquema</h3>
+            <p class="mb-4">Você não precisa viver preso aos padrões do passado.</p>
+            <a href="#" class="underline hover:text-white">Quero agendar!</a>
+          </div>
+          <!-- Adicione outros cards aqui -->
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="text-center py-10 bg-[#EDEB37] text-[#981b37] font-bold text-xl mt-10 fade-up">
+        Acabe com a insegurança na sua vida 👇
+      </section>
+
+      <!-- Contato -->
+      <footer id="contato" class="py-10 text-center text-[#EDEB37]/90 text-base fade-up">
+        <p class="mb-2">Links úteis:</p>
+        <div class="flex flex-wrap justify-center gap-4 mt-2 text-lg">
+          <a href="#" class="hover:text-white underline">Whatsapp</a>
+          <a href="#" class="hover:text-white underline">Instagram</a>
+          <a href="#" class="hover:text-white underline">YouTube</a>
+          <a href="#" class="hover:text-white underline">LinkedIn</a>
+          <a href="#" class="hover:text-white underline">Facebook</a>
+        </div>
+
+      </footer>
+    </div>
+
+    <!-- Lado direito -->
+    <div class="bg-side hidden md:block"></div>
+  </div>
+
+  <!-- JS animações -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
